@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const agenda_controllers_1 = require("../controllers/agenda.controllers");
+const app = express_1.Router();
+app.get('/', agenda_controllers_1.listarAgenda);
+app.post('/', agenda_controllers_1.crearAgenda);
+app.put('/:id', agenda_controllers_1.actualizarContacto);
+app.delete('/:id', agenda_controllers_1.eliminarContacto);
+exports.default = app;
